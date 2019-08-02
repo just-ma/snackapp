@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  background-color: rgb(69, 166, 211);
+  border-radius: 10px;
+  overflow:hidden;
+  margin: 10px;
+
+  &__picture {
+    width: 100%;
+    height:200px;
+  }
+
+  &__info {
+    position: absolute;
+    margin: 10px;
+  }
+
+  &__rating {
+    text-align: center;
+  }
+
+  &__title {
+
+  }
+}
+
+.userRating {
+  width: 100%;
+  align-content: center;
+  &__star {
+    margin: 2px;
+    width: 28px;
+    height: 28px;
+
+    &.-empty {
+      background-image: url("../../assets/sprites/bigstar-empty.svg");
+    }
+
+    &.-full {
+      background-image: url("../../assets/sprites/bigstar-full.svg");
+    }
+  }
+}
+
+.rating {
+  display:block;
+  &__star {
+    width: 16px;
+    height: 16px;
+
+    &.-empty {
+      background-image: url("../../assets/sprites/smallstar-empty.svg");
+    }
+
+    &.-full {
+      background-image: url("../../assets/sprites/smallstar-full.svg");
+    }
+  }
+}
