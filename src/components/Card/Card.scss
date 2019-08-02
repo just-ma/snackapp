@@ -2,33 +2,59 @@
   position: relative;
   width: 250px;
   height: 300px;
-  background-color: rgb(69, 166, 211);
   border-radius: 10px;
-  overflow:hidden;
+  overflow: hidden;
   margin: 10px;
+
+  &__main {
+    position: absolute;
+    width: 100%;
+    height: 240px;
+  }
 
   &__picture {
     width: 100%;
-    height:200px;
+    height: 100%;
+  }
+
+  &__fade {
+    position: absolute;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), white, white);
+    width: 100%;
+    bottom: 0px;
+    height: 100px;
   }
 
   &__info {
     position: absolute;
+    width: 100%;
+    bottom: 0px;
     margin: 10px;
-  }
-
-  &__rating {
-    text-align: center;
+    color: rgb(0, 111, 159);
+    font-family: Helvetica;
+    font-size: 12px;
+    line-height: 20px;
   }
 
   &__title {
+    font-weight: 300;
+    display: block;
+    font-size: 20px;
+  }
 
+  &__rating {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(69, 166, 211);
+    text-align: center;
   }
 }
 
 .userRating {
-  width: 100%;
-  align-content: center;
+  position: relative;
+  top: 12px;
   &__star {
     margin: 2px;
     width: 28px;
@@ -45,7 +71,10 @@
 }
 
 .rating {
-  display:block;
+  position: relative;
+  bottom: -3px;
+  margin-right: 3px;
+
   &__star {
     width: 16px;
     height: 16px;
