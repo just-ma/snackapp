@@ -5,83 +5,122 @@ import "./Landing.scss";
 const cards = [
   {
     id: 1,
-    rating: 3,
+    rating: 3.8,
     count: 12,
-    title: "Tate's Bake Shop Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    title: "Pretzel Crisps - Buffalo",
+    image: "https://i.ibb.co/M8KnR3L/pretzelbuffalo.jpg"
   },
   {
     id: 2,
-    rating: 3.5,
-    count: 2,
-    title: "Tate's Mini Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    rating: 3.6,
+    count: 19,
+    title: "Pretzel Crisps - Original",
+    image: "https://i.ibb.co/GVLt0t7/pretzelcrisps.jpg"
   },
   {
     id: 3,
-    rating: 4,
-    count: 129,
-    title: "Bake Shop Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    rating: 3,
+    count: 4,
+    title: "Paleo Puffs",
+    image: "https://i.ibb.co/s5jpjhQ/paleopuffs.jpg"
   },
   {
     id: 4,
     rating: 2.2,
-    count: 4,
-    title: "Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    count: 9,
+    title: "Sweet Potato Chips",
+    image: "https://i.ibb.co/5jZz1Rr/jacksonshonest.jpg"
   },
   {
     id: 5,
-    rating: 3.5,
-    count: 2,
-    title: "Tate's Mini Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    rating: 3.8,
+    count: 14,
+    title: "Cheese Crackers",
+    image: "https://i.ibb.co/3pBdB9H/latejuly.jpg"
   },
   {
     id: 6,
-    rating: 4,
-    count: 129,
-    title: "Bake Shop Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    rating: 3.6,
+    count: 7,
+    title: "Mojo Crunch",
+    image: "https://i.ibb.co/VCQ96tc/mojocrunch.jpg"
   },
   {
     id: 7,
-    rating: 2.2,
-    count: 4,
-    title: "Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    rating: 4.4,
+    count: 34,
+    title: "Hippeas",
+    image: "https://i.ibb.co/dGC3PCL/hippeas.jpg"
   },
   {
     id: 8,
-    rating: 3.5,
-    count: 2,
-    title: "Tate's Mini Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    rating: 4,
+    count: 11,
+    title: "Popcorners - Jalapeno",
+    image: "https://i.ibb.co/hHL1DJQ/popjalapeno.jpg"
   },
   {
     id: 9,
-    rating: 4,
-    count: 129,
-    title: "Bake Shop Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    rating: 4.2,
+    count: 16,
+    title: "Popcorners - Kettle Corn",
+    image: "https://i.ibb.co/SBM7XnC/popkettle.jpg"
   },
   {
     id: 10,
-    rating: 2.2,
+    rating: 4.5,
+    count: 20,
+    title: "Popcorners - Cheddar",
+    image: "https://i.ibb.co/4YCRsgp/popcheddar.jpg"
+  },
+  {
+    id: 11,
+    rating: 4.6,
+    count: 21,
+    title: "Tate's Tiny Cookies",
+    image: "https://i.ibb.co/djByqxb/tatecookies.jpg"
+  },
+  {
+    id: 12,
+    rating: 3.9,
+    count: 13,
+    title: "Bacon Habanero Chips",
+    image: "https://i.ibb.co/yV22r6G/baconhabanero.jpg"
+  },
+  {
+    id: 13,
+    rating: 3.3,
+    count: 3,
+    title: "Blue Chips",
+    image: "https://i.ibb.co/g9bXfp5/bluechips.jpg"
+  },
+  {
+    id: 14,
+    rating: 3.8,
+    count: 7,
+    title: "Nacho Chips",
+    image: "https://i.ibb.co/sjknfKy/nachochips.jpg"
+  },
+  {
+    id: 15,
+    rating: 3.6,
     count: 4,
-    title: "Cookies",
-    image:
-      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+    title: "Brussel Sprout Puffs",
+    image: "https://i.ibb.co/8bLwHVn/brusselsprout.jpg"
+  },
+  {
+    id: 16,
+    rating: 4.2,
+    count: 14,
+    title: "Sweet Potato Chips",
+    image: "https://i.ibb.co/0yzDL00/sweetpotato.jpg"
+  },
+  {
+    id: 17,
+    rating: 3.2,
+    count: 6,
+    title: "Mochi Rice Bites",
+    image: "https://i.ibb.co/QY8t6Lc/mochiricebites.jpg"
   }
 ];
 
@@ -113,7 +152,7 @@ class Landing extends Component {
       <div className="landing">
         <div className="background" />
         <div className="landing__header">
-          <div className="landing__title">Vote for your favorite snacks...</div>
+          <div className="landing__title">Rate your favorite snacks...</div>
           <div className="landing__sort">
             <div>Sort by:</div>
             <span
