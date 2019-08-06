@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CardContainer from "../../components/CardContainer/CardContainer";
 import "./Landing.scss";
-import firebase from "../../firebase.js"
 
 class Landing extends Component {
   constructor(props) {
