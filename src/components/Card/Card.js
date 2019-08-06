@@ -6,13 +6,13 @@ import firebase from "../../firebase.js";
 export default class Card extends Component {
   constructor(props) {
     super(props);
+    let cachedRating = localStorage.getItem("snack_" + (props.id - 1));
     this.state = {
       id: props.id - 1,
-      name: props.name,
       rating: props.rating,
-      myRating: 0,
+      myRating: cachedRating || 0,
       count: props.count,
-      voted: false
+      voted: !!cachedRating
     };
   }
 
@@ -31,6 +31,8 @@ export default class Card extends Component {
           myRating: rating
         });
 
+        localStorage.setItem("snack_" + this.state.id, rating);
+
         firebase
           .database()
           .ref("items/" + this.state.id + "/rating")
@@ -47,6 +49,8 @@ export default class Card extends Component {
         voted: true
       });
 
+      localStorage.setItem("snack_" + this.state.id, rating);
+
       firebase
         .database()
         .ref("items/" + this.state.id + "/rating")
@@ -61,7 +65,7 @@ export default class Card extends Component {
   render() {
     const props = this.props;
     return (
-      <div id={props.id} className="card">
+      <div id={this.state.id} className="card">
         <div className="card__main">
           <img className="card__picture" alt={props.title} src={props.image} />
           <div className="card__fade" />
@@ -69,12 +73,12 @@ export default class Card extends Component {
             <span className="card__title">{props.title}</span>
             <Rating
               className="rating"
-              initialRating={props.rating}
+              initialRating={this.state.rating}
               readonly
               emptySymbol={<div className="rating__star -empty" />}
               fullSymbol={<div className="rating__star -full" />}
             />
-            <span>{`(${props.count})`}</span>
+            <span>{`(${this.state.count})`}</span>
           </div>
         </div>
         <div className="card__rating">

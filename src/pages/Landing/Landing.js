@@ -1,15 +1,29 @@
 import React, { Component } from "react";
 import CardContainer from "../../components/CardContainer/CardContainer";
 import "./Landing.scss";
+import firebase from "../../firebase.js";
 
 class Landing extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       sort: "none",
-      items: []
+      cards: []
     };
   }
+
+  componentDidMount = () => {
+    let landing = this;
+    firebase
+      .database()
+      .ref("items")
+      .once("value")
+      .then(function(snapshot) {
+        landing.setState({
+          cards: snapshot.val()
+        });
+      });
+  };
 
   sortArr = arr => {
     return arr.sort((a, b) => {
@@ -62,7 +76,7 @@ class Landing extends Component {
             </span>
           </div>
         </div>
-        <CardContainer />
+        <CardContainer cards={this.sortArr(this.state.cards)}/>
       </div>
     );
   }
