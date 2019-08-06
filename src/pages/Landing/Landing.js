@@ -201,23 +201,6 @@ class Landing extends Component {
     });
   };
 
-  componentDidMount() {
-    const itemRef = firebase.database().ref('items');
-    itemRef.on('value', (snapshot) => {
-      let items = snapshot.val();
-      let newState = [];
-      for (let item in items) {
-        newState.push({
-          id: item,
-          name: items[item].name,
-          type: items[item].type
-        });
-      }
-      this.setState({
-        items: newState
-      });
-    });
-  }
   render() {
     return (
       <div className="landing">
