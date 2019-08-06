@@ -1,11 +1,25 @@
 import React, { Component } from "react";
 import "./Card.scss";
 import Rating from "react-rating";
+import firebase from "../../firebase.js"
 
 export default class Card extends Component {
   handleRating = rating => {
     console.log(`item ${this.props.id} got a rating of ${rating}`);
+    //console.log(this.props.id);
+    this.updateRating(rating);
+    console.log("rating"+ this.props.rating);
+    firebase.database().ref('items/'+this.props.id+'/rating').set(rating);
   };
+  updateRating(rating) {
+    console.log("count: "+this.props.count)
+    console.log( (this.props.rating * this.props.count + rating)/(this.props.count+1));
+    //this.props.count++;
+    this.setState({
+      count: this.props.count+1
+    });
+    //this.props.count.set(this.props.count++);
+  }
   render() {
     const props = this.props;
     return (

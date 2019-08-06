@@ -1,8 +1,61 @@
 import React, { Component } from "react";
 import CardContainer from "../../components/CardContainer/CardContainer";
 import "./Landing.scss";
+import firebase from "../../firebase.js"
 
+var db = firebase.database();
+var ref = db.ref('items');
+var sample_data = {
+  "name": "Tate's Bake Shop Cookies",
+  "type": "snack",
+  "rating": 2,
+  "count": 14,
+  "image": "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+}
+console.log("reference[0]:"+db.ref('items'))
+//ref.push(sample_data);
+console.log("reference to json:" );
 const cards = [
+  {
+    "id": 1,
+    "rating": 3,
+    "count": 12,
+    "title": "Tate's Bake Shop Cookies",
+    "image":
+      "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5b0def3e-306b-4cf8-9bf8-9eaab1a5a52d.jpg"
+
+  },
+  {
+    "id": 1,
+    "name": "Peach Tea Diet Snapple",
+    "rating": 0,
+    "count": 0,
+    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTXYCJnrV6UlGWWRK9D-uPmvM7vm4h3oRAvHX7U3J5BG8GqMPY6DKIzKdTq91Up3n65et3tvBc2W1KALF2TYDBhqnWXWU4x3f6tnxL28RAr&usqp=CAc"
+  },
+  {
+    "id": 2,
+    "name": "Lemon Tea Diet Snapple",
+    "rating": 0,
+    "count": 0,
+    "image": "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_87fe6949-162d-45a2-a85f-01061630a342.JPG"
+  },
+  {
+    "id": 3,
+    "name": "Chocolate Pocky",
+    "rating": 0,
+    "count": 0,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Strawberry Pocky",
+    "rating": 0,
+    "count": 0,
+    "image": ""
+  }
+]
+
+/*[
   {
     id: 1,
     rating: 3.8,
@@ -122,13 +175,14 @@ const cards = [
     title: "Mochi Rice Bites",
     image: "https://i.ibb.co/QY8t6Lc/mochiricebites.jpg"
   }
-];
+];*/
 
 class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sort: "none"
+      sort: "none",
+      items: []
     };
   }
 
@@ -147,6 +201,23 @@ class Landing extends Component {
     });
   };
 
+  componentDidMount() {
+    const itemRef = firebase.database().ref('items');
+    itemRef.on('value', (snapshot) => {
+      let items = snapshot.val();
+      let newState = [];
+      for (let item in items) {
+        newState.push({
+          id: item,
+          name: items[item].name,
+          type: items[item].type
+        });
+      }
+      this.setState({
+        items: newState
+      });
+    });
+  }
   render() {
     return (
       <div className="landing">
