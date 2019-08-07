@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import CardContainer from "../../components/CardContainer/CardContainer";
 import "./Landing.scss";
 import firebase from "../../firebase.js";
+import { Link } from "react-router-dom";
 
 class Landing extends Component {
   constructor() {
     super();
     this.state = {
-      sort: "none",
+      sort: localStorage.getItem("landSort") || "popularity",
       cards: []
     };
   }
@@ -30,9 +31,9 @@ class Landing extends Component {
       switch (this.state.sort) {
         case "popularity":
           return b.count - a.count;
-        case "highrating":
+        case "toprated":
           return b.rating - a.rating;
-        case "lowrating":
+        case "lowrated":
           return a.rating - b.rating;
         default:
           return 1;
@@ -40,37 +41,43 @@ class Landing extends Component {
     });
   };
 
+  setSort = sort => {
+    this.setState({ sort: sort });
+    localStorage.setItem("landSort", sort);
+  }
+
   render() {
     return (
       <div className="landing">
         <div className="background" />
         <div className="landing__header">
           <div className="landing__title">Rate your favorite snacks...</div>
+          <Link className="landing__link" to="/requests">Request snacks</Link>
           <div className="landing__sort">
             <div>Sort by:</div>
             <span
               style={{
                 fontWeight: this.state.sort === "popularity" ? 600 : null
               }}
-              onClick={() => this.setState({ sort: "popularity" })}
+              onClick={() => this.setSort("popularity")}
             >
               Popularity
             </span>
             <span>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</span>
             <span
               style={{
-                fontWeight: this.state.sort === "highrating" ? 600 : null
+                fontWeight: this.state.sort === "toprated" ? 600 : null
               }}
-              onClick={() => this.setState({ sort: "highrating" })}
+              onClick={() => this.setSort("toprated")}
             >
-              Highest Rated
+              Top Rated
             </span>
             <span>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</span>
             <span
               style={{
-                fontWeight: this.state.sort === "lowrating" ? 600 : null
+                fontWeight: this.state.sort === "lowrated" ? 600 : null
               }}
-              onClick={() => this.setState({ sort: "lowrating" })}
+              onClick={() => this.setSort("lowrated")}
             >
               Lowest Rated
             </span>
