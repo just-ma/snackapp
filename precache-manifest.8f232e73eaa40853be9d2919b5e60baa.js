@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e497249eff1c6a3cfad01ca967f50c18",
+    "revision": "9a6d4ddebb8af9f1f1e655385cb6cdb2",
     "url": "/snackapp/index.html"
   },
   {
-    "revision": "5695653be70461d9358f",
+    "revision": "f5abf069d748bdbed9c7",
     "url": "/snackapp/static/css/main.bb94463b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/snackapp/static/js/2.f6c96737.chunk.js"
   },
   {
-    "revision": "5695653be70461d9358f",
-    "url": "/snackapp/static/js/main.f1bb594c.chunk.js"
+    "revision": "f5abf069d748bdbed9c7",
+    "url": "/snackapp/static/js/main.1d5b4140.chunk.js"
   },
   {
     "revision": "8e2acae2a1a9993fe8b7",

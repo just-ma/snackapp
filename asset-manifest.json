@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/snackapp/static/css/main.bb94463b.chunk.css",
-    "main.js": "/snackapp/static/js/main.f1bb594c.chunk.js",
-    "main.js.map": "/snackapp/static/js/main.f1bb594c.chunk.js.map",
+    "main.js": "/snackapp/static/js/main.1d5b4140.chunk.js",
+    "main.js.map": "/snackapp/static/js/main.1d5b4140.chunk.js.map",
     "runtime~main.js": "/snackapp/static/js/runtime~main.0f847839.js",
     "runtime~main.js.map": "/snackapp/static/js/runtime~main.0f847839.js.map",
     "static/js/2.f6c96737.chunk.js": "/snackapp/static/js/2.f6c96737.chunk.js",
     "static/js/2.f6c96737.chunk.js.map": "/snackapp/static/js/2.f6c96737.chunk.js.map",
     "index.html": "/snackapp/index.html",
-    "precache-manifest.97fb950c612b9831925b15ed6af5ca8a.js": "/snackapp/precache-manifest.97fb950c612b9831925b15ed6af5ca8a.js",
+    "precache-manifest.8f232e73eaa40853be9d2919b5e60baa.js": "/snackapp/precache-manifest.8f232e73eaa40853be9d2919b5e60baa.js",
     "service-worker.js": "/snackapp/service-worker.js",
     "static/css/main.bb94463b.chunk.css.map": "/snackapp/static/css/main.bb94463b.chunk.css.map",
     "static/media/Request.scss": "/snackapp/static/media/up-full.f3394a05.svg",
