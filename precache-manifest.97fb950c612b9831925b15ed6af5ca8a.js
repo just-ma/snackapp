@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "711cde7f1d0b85c5f5b630e462cd4440",
+    "revision": "e497249eff1c6a3cfad01ca967f50c18",
     "url": "/snackapp/index.html"
   },
   {
-    "revision": "8d0e7ff85c54140118a0",
+    "revision": "5695653be70461d9358f",
     "url": "/snackapp/static/css/main.bb94463b.chunk.css"
   },
   {
-    "revision": "5330f18b723cfb492bcb",
-    "url": "/snackapp/static/js/2.9d2b4427.chunk.js"
+    "revision": "1428d30d2a2b2c786f09",
+    "url": "/snackapp/static/js/2.f6c96737.chunk.js"
   },
   {
-    "revision": "8d0e7ff85c54140118a0",
-    "url": "/snackapp/static/js/main.6209a216.chunk.js"
+    "revision": "5695653be70461d9358f",
+    "url": "/snackapp/static/js/main.f1bb594c.chunk.js"
   },
   {
-    "revision": "05baa870553cece00109",
-    "url": "/snackapp/static/js/runtime~main.e0e4d29e.js"
+    "revision": "8e2acae2a1a9993fe8b7",
+    "url": "/snackapp/static/js/runtime~main.0f847839.js"
   },
   {
     "revision": "475901e0980e964f60e38daad508d04a",
