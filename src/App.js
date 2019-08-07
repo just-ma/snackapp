@@ -5,7 +5,7 @@ import Requests from "./pages/Requests/Requests";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/snackapp">
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/requests" component={Requests} />
